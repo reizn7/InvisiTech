@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: fadeIn 0.7s ease;
+  padding: 2rem;
+}
+
+body.light {
+  background: linear-gradient(135deg, #f8f8f8, #ffffff);
+  color: #111827;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #00fff7;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 255, 247, 0.5);
+}
+
+.container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #60fef1;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.video-area {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+video,
+canvas {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(0, 255, 247, 0.2);
+}
+
+.neon-button {
+  margin-top: 1.5rem;
+  padding: 12px 28px;
+  border: 2px solid #00fff7;
+  background: transparent;
+  border-radius: 12px;
+  color: #00fff7;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 8px #00fff7;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.neon-button:hover {
+  background-color: #00fff7;
+  color: #0f0f0f;
+  box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7;
+}
+
+.toggle-switch {
+  margin-top: 2rem;
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00fff7;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  top: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0f172a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  text-align: center;
+}
